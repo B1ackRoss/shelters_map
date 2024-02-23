@@ -1,0 +1,71 @@
+.container{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.container *{
+    box-sizing: border-box;
+}
+
+input{
+    width:calc(100% - 30px);
+    position: relative;
+    padding: 10px 15px;
+    border: 2px solid rgb(87, 86, 86);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: border-color 0.3s ease;
+    border-radius: 8px;
+}
+
+input:focus{
+    border-color: rgba(184, 62, 233, 0.818);
+    outline: none;
+}
+
+.container svg{
+    display: block;
+    position: absolute;
+    top: 50%; 
+    right: 20px; 
+    transform: translateY(-50%); 
+    opacity: 0.5;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.container svg:hover{
+    opacity: 1;
+}
+
+.suggestions{
+    position: absolute;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    background: #FFF;
+    border: 2px solid rgba(184, 62, 233, 0.818);
+    width: 100%;
+    z-index: 10;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    transition: display 0.3s ease;
+    border-top: none;
+    border-radius: 8px;
+
+}
+
+.listItem{
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+}
+
+.listItem:hover{
+    background: #efefef;
+}

@@ -1,0 +1,77 @@
+.AddressSearchContainer{
+    max-width: 500px;
+    width: 100%;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+}
+
+.ModeToggle{
+    width: 120px;
+    height: 41,6px;
+    padding: 0;
+    background: #FFF;
+    border: 2px solid rgb(87, 86, 86);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 5px;
+    font-family: 'Acme', sans-serif;
+}
+
+.ModeToggle:hover{
+    color: rgb(187, 56, 239);
+}
+
+.ButtonClicked {
+    background-color: rgb(225, 216, 216); 
+}
+
+.loc_Img_Container{
+    max-width: 500px;
+    position: fixed;
+    bottom: 50%;
+    right: -19px;
+    transform: translateX(-50%);
+    z-index: 110;
+    transition: transform 0.7s ease;
+  
+}
+
+.loc_Img{
+   cursor: pointer;
+   
+}
+
+.loc_Img:hover{
+    transform: scale(1.2); 
+    transition: transform 0.3s ease;
+  
+}
+.shelter_Btn_Container{
+    max-width: 500px;
+    position: fixed;
+    bottom: 42%;
+    right: -19px;
+    transform: translateX(-50%);
+    z-index: 110;
+    transition: transform 0.7s ease;
+}
+.shelter_Img{
+    cursor: pointer;
+}
+
+.shelter_Img:hover{
+    transform: scale(1.2); 
+    transition: transform 0.3s ease;
+}
+
+.clear_btn{
+    background: transparent;
+    border: none;
+    padding: 0;
+    
+}

@@ -1,0 +1,25 @@
+.img_close_container{
+    font-family: 'Acme', sans-serif;   
+}
+
+.close_modal_img {
+    cursor: pointer;
+    transition: transform 0.7s ease;
+}
+
+.close_modal_img:hover {
+    transform: scale(1.09); 
+    transition: transform 0.3s ease;
+}
+
+.clear_btn {
+    float: right;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+h2{
+    color: red;
+    
+}
