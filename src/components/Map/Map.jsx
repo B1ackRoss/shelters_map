@@ -27,6 +27,7 @@ const defaltOptions = {
   scrollwheel: false,
   disableDoubleClickZoom: false,
   fullscreenControl: false,
+  gestureHandling: 'greedy',
   styles: defaultTheme
 }
 
