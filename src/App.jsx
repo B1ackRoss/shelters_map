@@ -6,7 +6,6 @@ import { useJsApiLoader} from '@react-google-maps/api'
 import { Autocomplete } from './components/Autocomplete';
 import { getBrowsreLocation } from './utils/geo';
 import data from "./Shelters.json"
-import  DataBase from "./DataBase.json"
 import s from './App.module.css'
 
 const API_KEY = 'AIzaSyA3MnuZQCUPFKiiqbnBH203Pr7frdOLxBI'
@@ -35,8 +34,7 @@ const App = () => {
   const [nearestModalIsOpen, setnearestModalIsOpen] = useState(false);
   const [nearestShelter, setNearestShelter] = useState(null);
   const [locationReceived, setLocationReceived] = useState(false);
-  const userLat = center.lat;
-  const userLng = center.lng;
+  const [markerMode, setMarkerMode] = useState(false);
  
   const { isLoaded, loadError } = useJsApiLoader({
   id: 'google-map-script',
@@ -78,7 +76,8 @@ const App = () => {
         setMode(MODES.MOVE);
     }
     console.log(mode);
-  }, [mode])
+  }, [mode]
+ )
 
   if (loadError) {
     console.error('Error loading Google Maps API:', loadError);
@@ -173,11 +172,17 @@ const App = () => {
     <div className='App'>
       <div className={s.AddressSearchContainer}>
         <Autocomplete isLoaded={isLoaded} onselect={onPlaceSelect}/>
-        <button className={isButtonClicked ? `${s.ModeToggle} ${s.ButtonClicked}` : s.ModeToggle}  onClick={() => {
+        <button className={ s.btn_add_markers}  onClick={() => {
         ToggleMode();
         setIsButtonClicked(!isButtonClicked);
-        }}>Markers mode</button>
-        <button className={s.ModeToggle} onClick={onDelete}>Delete markers</button>
+        setMarkerMode(!markerMode);
+        }}>
+          <img className={s.marker_img_add} src="/current-location.svg" alt="" />
+        </button>
+        {markerMode ? <button className={s.btn_delete_markers}  onClick={onDelete}>
+          <img className={s.marker_img_delete} src="/delete (1).svg" alt="" />
+        </button> : ''}
+      
         
       </div>
       <div className={s.loc_Img_Container}>
@@ -192,7 +197,7 @@ const App = () => {
         </button>
       </div>
     
-      {isLoaded ? <Map defaultCenter={defaultCenter} center={center} mode={mode} markers={markers} onMarkerAdd={onMarkerAdd} nearestModalIsOpen={nearestModalIsOpen} nearestShelter={nearestShelter}  shelters={showShelters ? shelters : []}/> : <h2>Loading</h2>}
+      {isLoaded ? <Map defaultCenter={defaultCenter} center={center} mode={mode} markers={markers} onMarkerAdd={onMarkerAdd} nearestModalIsOpen={nearestModalIsOpen} nearestShelter={nearestShelter}  shelters={showShelters ? shelters : []}/> : <div ><h2 className={s.loadText}>Loading</h2></div>}
      
     </div>
     </ModalContext.Provider>

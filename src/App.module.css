@@ -1,5 +1,5 @@
 .AddressSearchContainer{
-    max-width: 500px;
+    max-width: 475px;
     width: 100%;
     position: fixed;
     top: 20px;
@@ -7,16 +7,18 @@
     transform: translateX(-50%);
     z-index: 10;
     display: flex;
+
 }
 
-.ModeToggle{
-    width: 120px;
+
+.btn_add_markers{
+    width: 80px;
     height: 41,6px;
     padding: 0;
-    background: #FFF;
-    border: 2px solid rgb(87, 86, 86);
+    margin-left: 0px;
+    background: none;
+    border: none;
     font-size: 1rem;
-    cursor: pointer;
     border-radius: 8px;
     margin-left: 5px;
     font-family: 'Acme', sans-serif;
@@ -26,8 +28,24 @@
     color: rgb(187, 56, 239);
 }
 
-.ButtonClicked {
-    background-color: rgb(225, 216, 216); 
+.marker_img_add{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btn_delete_markers{
+    width: 50px;
+    height: 100%;
+    border: none;
+    background: none;
+    margin-left: 10px;
+
+}
+.marker_img_delete{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .loc_Img_Container{
@@ -67,6 +85,13 @@
 .shelter_Img:hover{
     transform: scale(1.2); 
     transition: transform 0.3s ease;
+}
+
+.loadText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Розмір екрану */
 }
 
 .clear_btn{

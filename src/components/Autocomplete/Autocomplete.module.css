@@ -1,6 +1,19 @@
 .container{
     position: relative;
-    width: 100%;
+    padding: 3px 2px;
+    width: 320px;
+    /* height: 50%; */
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #FFF;
+    border: 2px solid rgb(87, 86, 86);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: border-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.input_container{
+    position: relative;
     height: 50%;
     font-family: 'Hind Siliguri', sans-serif;
 }
@@ -10,14 +23,15 @@
 }
 
 input{
-    width:calc(100% - 30px);
+    width:300px;
     position: relative;
     padding: 10px 15px;
-    border: 2px solid rgb(87, 86, 86);
+    padding-right: 30px;
     font-size: 1rem;
     font-weight: 700;
-    transition: border-color 0.3s ease;
+    border: none;
     border-radius: 8px;
+
 }
 
 input:focus{
@@ -25,17 +39,6 @@ input:focus{
     outline: none;
 }
 
-.container svg{
-    display: block;
-    position: absolute;
-    top: 50%; 
-    right: 20px; 
-    transform: translateY(-50%); 
-    opacity: 0.5;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-}
 
 .container svg:hover{
     opacity: 1;
@@ -69,3 +72,15 @@ input:focus{
 .listItem:hover{
     background: #efefef;
 }
+
+.svgIcon {
+    display: block;
+    position: absolute;
+    top: 50%; 
+    right: 15px; 
+    transform: translateY(-50%); 
+    opacity: 0.5;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }

@@ -6,6 +6,8 @@ import { Marker } from '../Marker/Marker';
 import { defaultTheme } from './Theme';
 import MarkerModalInfo from '../MarkerInfoModal/MarkerInfoModal';
 import NearestShelterModal from '../NearestShelterModal/NearestShelterModal'
+import { MarkerClusterer } from "@googlemaps/markerclusterer";
+
 
 
 

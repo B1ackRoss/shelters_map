@@ -64,13 +64,28 @@ export const Autocomplete = ({isLoaded, onselect}) => {
          
         }, [isLoaded, init])
 
-    return <div className={s.container} ref={ref}>
-        <input type="text" className={s.container}
-            value={value}
-            onChange={handleInput}
-            disabled={!ready}
-            placeholder="Where are you going?" />
-        {status === "OK" && <ul className={s.suggestions}>{renderSuggestions()}</ul>}
-        {value !=='' ? <svg onClick={() => setValue('')} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="x-circle"><rect ></rect><circle cx="128" cy="128" r="96" fill="none" stroke="#9c9c9c" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></circle><line x1="160" x2="96" y1="96" y2="160" fill="none" stroke="#9c9c9c" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line><line x1="160" x2="96" y1="160" y2="96" fill="none" stroke="#9c9c9c" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line></svg>: ''}
-    </div>
+    return <>
+        <div className={s.container} ref={ref}>
+    <input
+      type="text"
+      // className={s.input_container}
+      value={value}
+      onChange={handleInput}
+      disabled={!ready}
+      placeholder="Where are you going?"
+    />
+    {status === "OK" && <ul className={s.suggestions}>{renderSuggestions()}</ul>}
+    {value !=='' && (
+      <svg onClick={() => setValue('')} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="x-circle" className={s.svgIcon}>
+        <rect />
+        <circle cx="128" cy="128" r="96" fill="none" stroke="#9c9c9c" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></circle>
+        <line x1="160" x2="96" y1="96" y2="160" fill="none" stroke="#9c9c9c" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
+        <line x1="160" x2="96" y1="160" y2="96" fill="none" stroke="#9c9c9c" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
+      </svg>
+    )}
+  </div>
+  <div>
+  
+  </div>
+      </>
 }

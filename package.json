@@ -11,8 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@googlemaps/markerclusterer": "^2.5.3",
     "@react-google-maps/api": "^2.19.2",
-    "@react-google-maps/marker-clusterer": "^2.19.2",
     "kml-parser": "^1.0.0",
     "mongodb": "^6.3.0",
     "react": "^18.2.0",
