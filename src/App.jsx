@@ -178,13 +178,13 @@ const App = () => {
       </div>
       <div className={s.loc_Img_Container}>
         <button className={s.clear_btn} onClick={getLocationOnClick}>
-         <img className={s.loc_Img} width={55} height={55}  src="/location.svg" alt="geolocation" />
+         <img className={s.loc_Img}  src="/location.svg" alt="geolocation" />
         </button>
           
       </div>
       <div className={s.shelter_Btn_Container}>
         <button className={s.clear_btn} onClick={addShelters}>
-          <img className={s.shelter_Img} width={55} height={55}  src="/shelter-svgrepo-com.svg" alt="Shelters" />
+          <img className={s.shelter_Img}  src="/shelter-svgrepo-com.svg" alt="Shelters" />
         </button>
       </div>
       <div>

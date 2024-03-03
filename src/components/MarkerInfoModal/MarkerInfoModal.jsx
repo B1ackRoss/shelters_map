@@ -12,7 +12,11 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     borderRadius: '25px',
     paddingTop: '0px',
-    paddingBottom: '0px'
+    paddingBottom: '0px',
+    width: '80%', /* Ширина вікна */
+    maxWidth: '400px', /* Максимальна ширина вікна */
+    marginLeft: 'auto', /* Відступ зліва */
+    marginRight: 'auto' /* Відступ справа */
     
   },
   overlay: {

@@ -6,8 +6,6 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    /* display: flex; */
-
 }
 
 
@@ -40,10 +38,6 @@
     cursor: pointer;
 }
 
-.marker_img_add:hover{
-    transform: scale(1.2); 
-    transition: transform 0.3s ease;
-}
 
 .btn_delete_markers{
     width: 50px;
@@ -65,10 +59,6 @@
     cursor: pointer;
 }
 
-.marker_img_delete:hover{
-    transform: scale(1.2); 
-    transition: transform 0.3s ease;
-}
 
 .loc_Img_Container{
     max-width: 500px;
@@ -82,15 +72,12 @@
 }
 
 .loc_Img{
-   cursor: pointer;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
    
 }
 
-.loc_Img:hover{
-    transform: scale(1.2); 
-    transition: transform 0.3s ease;
-  
-}
 .shelter_Btn_Container{
     max-width: 500px;
     position: fixed;
@@ -108,13 +95,12 @@
    
 }
 .shelter_Img{
+    width: 55px;
+    height: 55px;
     cursor: pointer;
 }
 
-.shelter_Img:hover{
-    transform: scale(1.2); 
-    transition: transform 0.3s ease;
-}
+
 
 .loadText{
     display: flex;
@@ -130,33 +116,52 @@
     
 }
 
+@media (hover:hover){
+    img:hover{
+        transform: scale(1.2); 
+        transition: transform 0.3s ease;
+    }
+}
+
+@media (hover: none){
+    img:active{
+        transform: scale(1.2); 
+        transition: transform 0.3s ease;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .loc_Img{
+        width: 50px;
+        height: 50px;
+    }
+    .shelter_Img{
+        width: 50px;
+        height: 50px;
+    }
+    .marker_img_add{
+        width: 40px;
+        height: 40px;
+    }
+    .marker_img_delete{
+        width: 40px;
+        height: 40px;
+    }
+    .btn_add_markers{
+        right: -9px;
+        /* bottom: 37%; */
+    }
+    .btn_delete_markers{
+        right: -19px;
+        bottom: 31%;
+    }
+}
+
 /* @media only screen and (max-width: 768px) {
     .content {
       width: 90%;
       margin: 80px auto;
-    }
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .content {
-      width: 90%;
-      margin: 80px auto;
-    }
-    
-    .aboba {
-      font-size: 18px;
-      margin-left: 40px;
-    }
-    
-    input[type="text"] {
-      width: 120px;
-      font-size: 13px;
-    }
-    
-    .add__btn {
-      margin-left: 5px;
-      width: 50px;
-      height: 27px;
     }
   }
   
