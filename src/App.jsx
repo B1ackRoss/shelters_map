@@ -172,16 +172,7 @@ const App = () => {
     <div className='App'>
       <div className={s.AddressSearchContainer}>
         <Autocomplete isLoaded={isLoaded} onselect={onPlaceSelect}/>
-        <button className={ s.btn_add_markers}  onClick={() => {
-        ToggleMode();
-        setIsButtonClicked(!isButtonClicked);
-        setMarkerMode(!markerMode);
-        }}>
-          <img className={s.marker_img_add} src="/current-location.svg" alt="" />
-        </button>
-        {markerMode ? <button className={s.btn_delete_markers}  onClick={onDelete}>
-          <img className={s.marker_img_delete} src="/delete (1).svg" alt="" />
-        </button> : ''}
+        
       
         
       </div>
@@ -195,6 +186,18 @@ const App = () => {
         <button className={s.clear_btn} onClick={addShelters}>
           <img className={s.shelter_Img} width={55} height={55}  src="/shelter-svgrepo-com.svg" alt="Shelters" />
         </button>
+      </div>
+      <div>
+        <button className={ s.btn_add_markers}  onClick={() => {
+        ToggleMode();
+        setIsButtonClicked(!isButtonClicked);
+        setMarkerMode(!markerMode);
+        }}>
+          <img className={s.marker_img_add} src="/current-location.svg" alt="" />
+        </button>
+        {markerMode ? <button className={s.btn_delete_markers}  onClick={onDelete}>
+          <img className={s.marker_img_delete} src="/delete (1).svg" alt="" />
+        </button> : ''}
       </div>
     
       {isLoaded ? <Map defaultCenter={defaultCenter} center={center} mode={mode} markers={markers} onMarkerAdd={onMarkerAdd} nearestModalIsOpen={nearestModalIsOpen} nearestShelter={nearestShelter}  shelters={showShelters ? shelters : []}/> : <div ><h2 className={s.loadText}>Loading</h2></div>}

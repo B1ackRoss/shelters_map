@@ -1,20 +1,26 @@
 .AddressSearchContainer{
-    max-width: 475px;
+    max-width: 330px;
     width: 100%;
     position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    display: flex;
+    /* display: flex; */
 
 }
 
 
 .btn_add_markers{
-    width: 80px;
+    width: 40px;
     height: 41,6px;
     padding: 0;
+    position: fixed;
+    bottom: 39%;
+    right:  -2px;
+    transform: translateX(-50%);
+    z-index: 110;
+    transition: transform 0.7s ease;
     margin-left: 0px;
     background: none;
     border: none;
@@ -29,29 +35,45 @@
 }
 
 .marker_img_add{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
+}
+
+.marker_img_add:hover{
+    transform: scale(1.2); 
+    transition: transform 0.3s ease;
 }
 
 .btn_delete_markers{
     width: 50px;
-    height: 100%;
+    height: 40px;
     border: none;
     background: none;
     margin-left: 10px;
+    position: fixed;
+    bottom: 32%;
+    right: -12px;
+    transform: translateX(-50%);
+    z-index: 110;
+    transition: transform 0.7s ease;
 
 }
 .marker_img_delete{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
+}
+
+.marker_img_delete:hover{
+    transform: scale(1.2); 
+    transition: transform 0.3s ease;
 }
 
 .loc_Img_Container{
     max-width: 500px;
     position: fixed;
-    bottom: 50%;
+    bottom: 55%;
     right: -19px;
     transform: translateX(-50%);
     z-index: 110;
@@ -72,11 +94,18 @@
 .shelter_Btn_Container{
     max-width: 500px;
     position: fixed;
-    bottom: 42%;
+    bottom: 47%;
     right: -19px;
     transform: translateX(-50%);
     z-index: 110;
     transition: transform 0.7s ease;
+}
+
+.marker_btn_container{
+    max-width: 500px;
+    width: 40px;
+    height: 40px;
+   
 }
 .shelter_Img{
     cursor: pointer;
@@ -100,3 +129,55 @@
     padding: 0;
     
 }
+
+/* @media only screen and (max-width: 768px) {
+    .content {
+      width: 90%;
+      margin: 80px auto;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .content {
+      width: 90%;
+      margin: 80px auto;
+    }
+    
+    .aboba {
+      font-size: 18px;
+      margin-left: 40px;
+    }
+    
+    input[type="text"] {
+      width: 120px;
+      font-size: 13px;
+    }
+    
+    .add__btn {
+      margin-left: 5px;
+      width: 50px;
+      height: 27px;
+    }
+  }
+  
+  @media only screen and (max-width: 420px){
+    input[type="text"]{
+      width: 80%;
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
+    .edit__save__btn{
+      margin: 0px 40px 20px 5px;
+    }
+    .edit__cancel__btn{
+      margin: 0px 40px 20px 5px;
+    }
+    .edit__delete-img{
+      right: 15%;
+    }
+    .add__btn{
+      margin-right: 7px;
+      height: 27px;
+    }
+  } 
+   */
